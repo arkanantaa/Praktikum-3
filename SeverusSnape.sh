@@ -199,13 +199,13 @@ subnet 192.186.6.0 netmask 255.255.255.0 {
 
 host HermioneGranger {
     hardware ethernet 76:8a:9f:bf:61:a7;
-    fixed-address 192.186.1.4;
+    fixed-address 192.186.1.14;
 }
 
 host ChoChang {
     hardware ethernet 3a:95:48:56:e1:97;
-    fixed-address 192.186.6.2;
+    fixed-address 192.186.6.14;
 }'  > /etc/dhcp/dhcpd.conf
 
-
+service isc-dhcp-server restart
  

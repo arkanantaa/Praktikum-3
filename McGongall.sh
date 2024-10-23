@@ -13,9 +13,9 @@ echo 'zone "hogwarts.A36.com" {
         file "/etc/bind/hogwarts/hogwarts.A36.com";
 };
 
-zone "4.168.192.in-addr.arpa" {
+zone "4.186.192.in-addr.arpa" {
     type master;
-    file "/etc/bind/hogwarts/4.168.192.in-addr.arpa";
+    file "/etc/bind/hogwarts/4.186.192.in-addr.arpa";
 };' > /etc/bind/named.conf.local
 
 echo '
