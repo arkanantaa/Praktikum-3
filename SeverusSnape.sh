@@ -116,7 +116,7 @@ subnet 192.186.2.0 netmask 255.255.255.0 {
     option broadcast-address 192.186.2.255;
     option domain-name-servers 192.186.3.3;
     default-lease-time 300;
-    max-lease-time 1200;
+    max-lease-time 6000;
 }
 
 subnet 192.186.3.0 netmask 255.255.255.0 {
@@ -131,8 +131,8 @@ subnet 192.186.5.0 netmask 255.255.255.0 {
     option routers 192.186.5.1;
     option broadcast-address 192.186.5.255;
     option domain-name-servers 192.186.3.3;
-    default-lease-time 300;
-    max-lease-time 1200;
+    default-lease-time 1200;
+    max-lease-time 6000;
 }
 
 subnet 192.186.6.0 netmask 255.255.255.0 {
@@ -143,7 +143,8 @@ subnet 192.186.6.0 netmask 255.255.255.0 {
     option domain-name-servers 192.186.3.3;
     default-lease-time 600;
     max-lease-time 6000;
-}'  > /etc/dhcp/dhcpd.conf
+}
+'  > /etc/dhcp/dhcpd.conf
 
 service isc-dhcp-server restart
 
@@ -168,7 +169,7 @@ subnet 192.186.2.0 netmask 255.255.255.0 {
     option broadcast-address 192.186.2.255;
     option domain-name-servers 192.186.3.3;
     default-lease-time 300;
-    max-lease-time 1200;
+    max-lease-time 6000;
 }
 
 subnet 192.186.3.0 netmask 255.255.255.0 {
@@ -183,8 +184,8 @@ subnet 192.186.5.0 netmask 255.255.255.0 {
     option routers 192.186.5.1;
     option broadcast-address 192.186.5.255;
     option domain-name-servers 192.186.3.3;
-    default-lease-time 300;
-    max-lease-time 1200;
+    default-lease-time 1200;
+    max-lease-time 6000;
 }
 
 subnet 192.186.6.0 netmask 255.255.255.0 {
