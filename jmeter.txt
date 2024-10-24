@@ -1,0 +1,27 @@
+Setup di Windows
+
+Thread Group > Add > Config Element > HTTP Cookie Manager
+
+# LOGIN
+
+Thread Group > Add > Sampler > HTTP Request
+http gryffindor.hogwarts.a36.com
+method : post
+path : /login.php
+parameter : 
+    username = wingardium
+    password = leviosa
+content type : application/x-www-form-urlencoded
+redirect automatically
+
+# HOME
+Thread Group > Add > Sampler > HTTP Request
+http gryffindor.hogwarts.a36.com
+method : get
+path : /home.php
+
+# LOG OUT
+Thread Group > Add > Sampler > HTTP Request
+http gryffindor.hogwarts.a36.com
+method : get
+path : /logout.php
