@@ -24,14 +24,4 @@ ln -s /etc/nginx/sites-available/gryffindor.hogwarts.A36.com /etc/nginx/sites-en
 
 service nginx restart
 
-#testing no 7
-apt-get install apache2-utils
-htop #pada 1 terminal (gunakan tmux)
-ab -n 1000 -c 100 http://gryffindor.hogwarts.A36.com #terminal lainnya jalankan ini selama 3x lalu rekam hasilnya
 
-
-
-#no 8
-apt-get install openjdk-11-jre -y
-wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip
-unzip apache-jmeter-5.6.3.zip

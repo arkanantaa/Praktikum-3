@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+#bashrc
+apt-get update
+apt-get install lynx -y
+
+#testing no 7
+apt-get install apache2-utils -y
+apt-get install tmux -y
+htop #pada 1 terminal (gunakan tmux)
+ab -n 1000 -c 100 http://gryffindor.hogwarts.A36.com #terminal lainnya jalankan ini selama 3x lalu rekam hasilnya
+
+#no 8
+apt-get install openjdk-11-jre -y
+cd /
+wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip
+unzip apache-jmeter-5.6.3.zip
+
+echo '<?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
@@ -120,4 +136,11 @@
       </hashTree>
     </hashTree>
   </hashTree>
-</jmeterTestPlan>
+</jmeterTestPlan>' > Test8.jmx
+
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test8.jmx -l no8-1.csv -e -o testFolder1
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test8.jmx -l no8-2.csv -e -o testFolder2
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test8.jmx -l no8-3.csv -e -o testFolder3
+
+
+
