@@ -24,4 +24,30 @@ ln -s /etc/nginx/sites-available/gryffindor.hogwarts.A36.com /etc/nginx/sites-en
 
 service nginx restart
 
+#no 9
+apt-get install apache2-utils -y
+htpasswd -c /etc/nginx/secretchamber jarkom
+#modul3
+
+echo 'upstream gryffindor {
+        server 192.186.1.2:8001;
+        server 192.186.1.3:8002;
+        server 192.186.1.4:8003;
+}
+
+server {
+        listen 80;
+        server_name gryffindor.hogwarts.A36.com;
+
+        location / {
+                proxy_pass http://gryffindor;
+
+                auth_basic "Restricted";
+                auth_basic_user_file /etc/nginx/secretchamber;
+        }
+}' > /etc/nginx/sites-available/gryffindor.hogwarts.A36.com 
+
+service nginx restart
+
+
 
