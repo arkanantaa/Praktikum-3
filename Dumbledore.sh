@@ -1,6 +1,7 @@
 #bashrc
 apt-get update
 apt-get install isc-dhcp-relay -y
+service isc-dhcp-relay start
 
 #no 2, 3, 4
 echo 'SERVERS="192.186.3.2"  

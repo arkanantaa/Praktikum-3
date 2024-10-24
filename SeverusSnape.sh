@@ -199,12 +199,12 @@ subnet 192.186.6.0 netmask 255.255.255.0 {
 }
 
 host HermioneGranger {
-    hardware ethernet 76:8a:9f:bf:61:a7;
+    hardware ethernet 6e:70:b4:5f:d9:eb;
     fixed-address 192.186.1.14;
 }
 
 host ChoChang {
-    hardware ethernet 3a:95:48:56:e1:97;
+    hardware ethernet 7a:a0:27:01:f3:3d;
     fixed-address 192.186.6.14;
 }'  > /etc/dhcp/dhcpd.conf
 

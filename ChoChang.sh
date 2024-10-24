@@ -3,4 +3,4 @@ echo 'auto eth0
 iface eth0 inet dhcp' > /etc/network/interfaces
 
 #no 5
-echo 'hwaddress ether 3a:95:48:56:e1:97' >> /etc/network/interfaces
+echo 'hwaddress ether 7a:a0:27:01:f3:3d' >> /etc/network/interfaces
