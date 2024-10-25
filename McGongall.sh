@@ -3,7 +3,6 @@ echo 'nameserver 192.168.122.1' > /etc/resolv.conf
 
 apt-get update
 apt-get install bind9 -y
-apt-get install dnsutils -y
 
 mkdir /etc/bind/hogwarts
 
@@ -106,3 +105,36 @@ echo 'options {
 
 service named restart
 
+
+# if no 8 error ga bisa download from apache
+echo 'options {
+        directory "/var/cache/bind";
+
+        forwarders {
+                8.8.8.8; #DNS Google
+        };
+
+        dnssec-validation no;
+        allow-query{any;};
+        auth-nxdomain no;    # conform to RFC1035
+        listen-on-v6 { any; };
+}; ' >/etc/bind/named.conf.options
+
+service named restart
+
+
+# kembalikan semula lagi
+echo 'options {
+        directory "/var/cache/bind";
+
+        forwarders {
+                192.168.122.1;
+        };
+
+        dnssec-validation no;
+        allow-query{any;};
+        auth-nxdomain no;    # conform to RFC1035
+        listen-on-v6 { any; };
+}; ' >/etc/bind/named.conf.options
+
+service named restart

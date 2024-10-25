@@ -4,9 +4,7 @@ apt-get install lynx -y
 
 #testing no 7
 apt-get install apache2-utils -y
-apt-get install tmux -y
-htop #pada 1 terminal (gunakan tmux)
-ab -n 1000 -c 100 http://gryffindor.hogwarts.A36.com #terminal lainnya jalankan ini selama 3x lalu rekam hasilnya
+ab -n 1000 -c 100 http://gryffindor.hogwarts.A36.com 
 
 #no 8
 # kalo gabisa forwarder ganti ke 8.8.8.8 dulu
@@ -143,5 +141,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 ./apache-jmeter-5.6.3/bin/jmeter -n -t Test8.jmx -l no8-2.csv -e -o testFolder2
 ./apache-jmeter-5.6.3/bin/jmeter -n -t Test8.jmx -l no8-3.csv -e -o testFolder3
 
+# copy satu satu ke file csv buat sendiri pakai google sheet
 
-
+#no12
+echo 'auto eth0
+iface eth0 inet dhcp
+hwaddress ether 7e:6d:c9:92:4e:ab' > /etc/network/interfaces

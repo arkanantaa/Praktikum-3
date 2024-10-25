@@ -97,7 +97,7 @@ auto eth0
 iface eth0 inet static
 	address 192.186.4.4
 	netmask 255.255.255.0
-	gateway 192.186.4.
+	gateway 192.186.4.1
 	
 #SusanBones
 auto eth0
