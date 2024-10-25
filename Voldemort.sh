@@ -47,6 +47,8 @@ server {
         }
 }' > /etc/nginx/sites-available/gryffindor.hogwarts.A36.com 
 
+ln -s /etc/nginx/sites-available/gryffindor.hogwarts.A36.com /etc/nginx/sites-enabled/
+
 service nginx restart
 
 #no 10
@@ -77,6 +79,8 @@ server {
         }
 
 }' > /etc/nginx/sites-available/gryffindor.hogwarts.A36.com 
+
+ln -s /etc/nginx/sites-available/gryffindor.hogwarts.A36.com /etc/nginx/sites-enabled/
 
 service nginx restart
 
@@ -111,5 +115,7 @@ server {
         }
 
 }' > /etc/nginx/sites-available/gryffindor.hogwarts.A36.com 
+
+ln -s /etc/nginx/sites-available/gryffindor.hogwarts.A36.com /etc/nginx/sites-enabled/
 
 service nginx restart
