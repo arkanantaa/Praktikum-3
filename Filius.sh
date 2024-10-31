@@ -29,9 +29,9 @@ composer install
 cp /laravel-jarkom-modul-3/.env.example /laravel-jarkom-modul-3/.env
 
 
-echo 'APP NAME =Laravel
+echo 'APP_NAME = Laravel
 APP_ENV = Local
-APP_KEY = jarkom
+APP_KEY=
 APP_DEBUG = true
 APP_URL=http://localhost
 
@@ -46,5 +46,8 @@ DB_DATABASE=kelompokA36_db
 DB_USERNAME=kelompokA36
 DB_PASSWORD=passwordA36' > /laravel-jarkom-modul-3/.env
 
+cd /laravel-jarkom-modul-3
+
 php artisan migrate:fresh
 php artisan db:seed --class=MusicsTableSeeder
+php artisan key:generate

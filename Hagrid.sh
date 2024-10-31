@@ -20,5 +20,5 @@ echo '[mysqld]
 skip-networking=0
 skip-bind-address' > /etc/mysql/my.cnf
 
-#cek : mariadb --host=192.186.4.2 --port=3306 --user=kelompokA36 --password
+#cek : mariadb --host=192.186.4.2 --port=3306 --user=kelompokA36 --password 
 
