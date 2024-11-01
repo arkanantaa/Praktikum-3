@@ -69,11 +69,7 @@ echo 'server {
 
     location / {
             try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    # pass PHP scripts to FastCGI server
-    location ~ \.php$ {
-    include snippets/fastcgi-php.conf;
+    }ppets/fastcgi-php.conf;
     fastcgi_pass unix:/var/run/php/php8.0-fpm.sock;
     }
 
@@ -92,6 +88,10 @@ chown -R www-data.www-data /laravel-jarkom-modul-3/storage
 service php8.0-fpm start
 
 service nginx restart
+
+    # pass PHP scripts to FastCGI server
+    location ~ \.php$ {
+    include sni
 
 #no 19
 echo 'pm = dynamic

@@ -29,7 +29,7 @@ curl -X POST http://192.186.6.3:8002/api/auth/login -H "Content-Type: applicatio
 
 #testing no 17
 
-curl -X POST http://192.186.6.3:8002/api/auth/login -H "Content-Type: application/json" -d '{"username":"username","password":"password"}' > /token.txt
+curl -X POST http://192.186.6.3:8002/api/auth/me -H "Content-Type: application/json" -d '{"username":"username","password":"password"}' > /token.txt
 
 token=$(cat token.txt | jq -r '.token')
 
@@ -38,3 +38,5 @@ ab -n 100 -c 10 -H "Authorization: Bearer $token" http://192.186.6.3:8002/api/me
 #testing no 19
 ab -n 100 -c 10 -g output15.data -p register.json -T application/json http://ravenclaw.hogwarts.a36.com/api/auth/register
 
+#testing no 20
+ab -n 100 -c 10 -g output15.data -p register.json -T application/json http://ravenclaw.hogwarts.a36.com/api/auth/register

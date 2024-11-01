@@ -8,7 +8,7 @@ unzip apache-jmeter-5.6.3.zip
 
 #testing no 7
 apt-get install apache2-utils -y
-ab -n 1000 -c 100 http://gryffindor.hogwarts.A36.com 
+ab -n 1000 -c 100 http://gryffindor.hogwarts.a36.com/index.php
 
 #no 8
 # kalo gabisa forwarder ganti ke 8.8.8.8 dulu
@@ -284,9 +284,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   </hashTree>
 </jmeterTestPlan>' > /Test10.jmx
 
-#./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-1.csv -e -o testFolder1_10
-#./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-2.csv -e -o testFolder2_10
-#./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-3.csv -e -o testFolder3_10
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-1.csv -e -o testFolder1_10
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-2.csv -e -o testFolder2_10
+./apache-jmeter-5.6.3/bin/jmeter -n -t Test10.jmx -l no10-3.csv -e -o testFolder3_10
 
 #no12
 echo 'auto eth0
